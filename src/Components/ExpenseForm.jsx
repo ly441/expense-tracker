@@ -1,5 +1,4 @@
-// components/ExpenseForm.jsx
-
+import React, { useState } from "react";
 
 const ExpenseForm = ({ onAddExpense }) => {
   const [description, setDescription] = useState("");
@@ -11,7 +10,7 @@ const ExpenseForm = ({ onAddExpense }) => {
     if (!description || !amount || !category) return;
 
     const newExpense = {
-      id: Date.now(), // simple id generation
+      id: Date.now(), // Unique ID
       description,
       amount,
       category,

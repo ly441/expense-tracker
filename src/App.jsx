@@ -1,10 +1,8 @@
 
-
-// App.jsx
-
-import ExpenseForm from "./ExpenseForm";
-import ExpenseTable from "./ExpenseTable";
-import SearchBar from "./SearchBar";
+import React, { useState } from "react";
+import ExpenseForm from "./components/ExpenseForm";
+import ExpenseTable from "./components/ExpenseTable";
+import SearchBar from "./components/SearchBar";
 
 const App = () => {
   const [expenses, setExpenses] = useState([]);
@@ -33,8 +31,6 @@ const App = () => {
       <h1 className="text-2xl font-bold mb-4">Expense Tracker</h1>
       <SearchBar searchTerm={searchTerm} onSearch={setSearchTerm} />
       <ExpenseForm onAddExpense={addExpense} />
-      
-      {/* Sorting controls */}
       <div className="mb-4">
         <label className="mr-2">Sort by:</label>
         <select
@@ -47,7 +43,6 @@ const App = () => {
           <option value="category">Category</option>
         </select>
       </div>
-      
       <ExpenseTable expenses={filteredExpenses} onDelete={deleteExpense} />
     </div>
   );
