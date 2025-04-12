@@ -1,3 +1,4 @@
+
 import React, { useState } from "react";
 
 const ExpenseForm = ({ onAddExpense }) => {
@@ -10,11 +11,12 @@ const ExpenseForm = ({ onAddExpense }) => {
     if (!description || !amount || !category) return;
 
     const newExpense = {
-      id: Date.now(), // Unique ID
+      id: Date.now(),
       description,
       amount,
       category,
     };
+
     onAddExpense(newExpense);
     setDescription("");
     setAmount("");
@@ -22,32 +24,29 @@ const ExpenseForm = ({ onAddExpense }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="mb-4">
+    <form onSubmit={handleSubmit} className="form">
       <input
         type="text"
         placeholder="Description"
         value={description}
         onChange={(e) => setDescription(e.target.value)}
-        className="border p-2 mr-2"
+        className="form-input"
       />
       <input
         type="number"
         placeholder="Amount"
         value={amount}
         onChange={(e) => setAmount(e.target.value)}
-        className="border p-2 mr-2"
+        className="form-input"
       />
       <input
         type="text"
         placeholder="Category"
         value={category}
         onChange={(e) => setCategory(e.target.value)}
-        className="border p-2 mr-2"
+        className="form-input"
       />
-      <button
-        type="submit"
-        className="bg-blue-500 text-white px-4 py-2 rounded"
-      >
+      <button type="submit" className="form-button">
         Add Expense
       </button>
     </form>
