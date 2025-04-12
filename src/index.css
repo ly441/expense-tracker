@@ -1,117 +1,117 @@
-/* Reset some default styles */
+
+/* Reset */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-/* Body Styles */
+/* Basic Body Styles */
 body {
   font-family: Arial, sans-serif;
-  background-color:lightskyblue;
+  background-color: #f9fafb;
   color: #333;
   line-height: 1.6;
 }
 
 /* Container for the App */
-.p-4 {
-  padding: 1rem;
-}
-
-.max-w-3xl {
-  max-width: 48rem; /* roughly 768px */
+.container {
+  padding: 16px;
+  max-width: 768px;
   margin: 0 auto;
 }
 
-/* Typography */
-.text-2xl {
-  font-size: 1.5rem;
+/* Header */
+.header {
+  font-size: 24px;
   font-weight: bold;
+  margin-bottom: 16px;
 }
 
-.font-bold {
-  font-weight: bold;
-}
-
-/* Margin Bottom */
-.mb-4 {
-  margin-bottom: 1rem;
-}
-
-/* Input & Select Styles */
-input,
-select,
-button {
-  font-size: 1rem;
-}
-
-input,
-select {
-  padding: 0.5rem;
+/* Search Bar */
+.search-input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 16px;
   border: 1px solid #ccc;
   border-radius: 4px;
-  margin-right: 0.5rem;
 }
 
-/* Form Button */
-.bg-blue-500 {
+/* Form Styles */
+.form {
+  margin-bottom: 16px;
+}
+
+.form-input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-right: 8px;
+  margin-bottom: 8px;
+}
+
+.form-button {
   background-color: #4299e1;
-}
-
-.text-white {
   color: #fff;
-}
-
-.px-4 {
-  padding-left: 1rem;
-  padding-right: 1rem;
-}
-
-.py-2 {
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-}
-
-.rounded {
-  border-radius: 0.25rem;
-}
-
-button {
+  padding: 8px 16px;
   border: none;
+  border-radius: 4px;
   cursor: pointer;
 }
 
-button:hover {
+.form-button:hover {
   opacity: 0.9;
 }
 
-/* Table Styles */
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-bottom: 1rem;
+/* Sort Controls */
+.sort-container {
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
 }
 
-th,
-td {
-  border: 1px solid black;
-  padding: 0.5rem;
+.sort-label {
+  margin-right: 8px;
+}
+
+.sort-select {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Expense Table Styles */
+.expense-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 16px;
+}
+
+.table-header,
+.table-cell {
+  border: 1px solid #ccc;
+  padding: 8px;
   text-align: left;
 }
 
-th {
-  background-color: lightgoldenrodyellow;
+.table-header {
+  background-color: #e2e8f0;
 }
 
-/* Utility classes */
-.sort-asc::after {
-  margin-right: 0.5rem;
-}
-
-.text-red-500 {
+/* Delete Button */
+.delete-button {
+  background: none;
+  border: none;
   color: #f56565;
+  cursor: pointer;
 }
 
-.hover\:underline:hover {
+.delete-button:hover {
   text-decoration: underline;
+}
+
+/* No Expenses Message */
+.no-expenses {
+  margin: 16px 0;
+  font-style: italic;
 }

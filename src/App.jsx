@@ -27,16 +27,16 @@ const App = () => {
     });
 
   return (
-    <div className="p-4 max-w-3xl mx-auto">
-      <h1 className="text-2xl font-bold mb-4">Expense Tracker</h1>
+    <div className="container">
+      <h1 className="header">Expense Tracker</h1>
       <SearchBar searchTerm={searchTerm} onSearch={setSearchTerm} />
       <ExpenseForm onAddExpense={addExpense} />
-      <div className="mb-4">
-        <label className="mr-2">Sort by:</label>
+      <div className="sort-container">
+        <label className="sort-label">Sort by:</label>
         <select
           value={sortBy}
           onChange={(e) => setSortBy(e.target.value)}
-          className="p-2 border"
+          className="sort-select"
         >
           <option value="">None</option>
           <option value="description">Description</option>

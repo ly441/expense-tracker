@@ -1,32 +1,31 @@
 
-
 import React from "react";
 
 const ExpenseTable = ({ expenses, onDelete }) => {
   if (expenses.length === 0) {
-    return <p>No expenses found.</p>;
+    return <p className="no-expenses">No expenses found.</p>;
   }
 
   return (
-    <table className="w-full border-collapse">
+    <table className="expense-table">
       <thead>
         <tr>
-          <th className="border p-2">Description</th>
-          <th className="border p-2">Amount</th>
-          <th className="border p-2">Category</th>
-          <th className="border p-2">Actions</th>
+          <th className="table-header">Description</th>
+          <th className="table-header">Amount</th>
+          <th className="table-header">Category</th>
+          <th className="table-header">Actions</th>
         </tr>
       </thead>
       <tbody>
         {expenses.map((expense) => (
           <tr key={expense.id}>
-            <td className="border p-2">{expense.description}</td>
-            <td className="border p-2">${expense.amount}</td>
-            <td className="border p-2">{expense.category}</td>
-            <td className="border p-2">
+            <td className="table-cell">{expense.description}</td>
+            <td className="table-cell">${expense.amount}</td>
+            <td className="table-cell">{expense.category}</td>
+            <td className="table-cell">
               <button
                 onClick={() => onDelete(expense.id)}
-                className="text-red-500 hover:underline"
+                className="delete-button"
               >
                 Delete
               </button>
@@ -39,3 +38,5 @@ const ExpenseTable = ({ expenses, onDelete }) => {
 };
 
 export default ExpenseTable;
+
+
