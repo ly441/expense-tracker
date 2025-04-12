@@ -8,7 +8,7 @@
 /* Body Styles */
 body {
   font-family: Arial, sans-serif;
-  background-color: #f9fafb;
+  background-color:lightskyblue;
   color: #333;
   line-height: 1.6;
 }
@@ -94,17 +94,17 @@ table {
 
 th,
 td {
-  border: 1px solid #ccc;
+  border: 1px solid black;
   padding: 0.5rem;
   text-align: left;
 }
 
 th {
-  background-color: #e2e8f0;
+  background-color: lightgoldenrodyellow;
 }
 
 /* Utility classes */
-.mr-2 {
+.sort-asc::after {
   margin-right: 0.5rem;
 }
 
