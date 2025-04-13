@@ -1,7 +1,8 @@
 # Expense Tracker App
 
 A fast, modern, and minimalist expense tracker built with **Vite** and **React**. Add, view, search, sort, and delete expenses — perfect for budgeting practice or frontend learning.
-
+## deployment
+https://app.netlify.com/sites/glowing-palmier-0b25c0/deploys
 ## Features
 
 - Add expenses with description, amount, and category
