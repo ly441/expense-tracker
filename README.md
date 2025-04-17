@@ -2,6 +2,7 @@
 
 A fast, modern, and minimalist expense tracker built with **Vite** and **React**. Add, view, search, sort, and delete expenses — perfect for budgeting practice or frontend learning.
 ## deployment
+https://app.netlify.com/sites/imaginative-chaja-801bb0/overview
 https://app.netlify.com/sites/glowing-palmier-0b25c0/deploys
 ## Features
 
